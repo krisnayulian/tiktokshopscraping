@@ -35,13 +35,13 @@ while A <= SESSION:
         print (f"Scrape the loop at {k}")
         open_product_v1(CATEGORY=CATEGORY)
         time.sleep(2)
-        driver.swipe(360, 1300, 360, 400, 500) # Adjust Swipe Product with your device
+        driver.swipe(360, 1300, 360, 400, 500)  # Adjust Swipe Product with your device
         k = k + 1
     try: time.sleep(2); up_button()
     except: pass
 
     time.sleep(2)
-    driver.swipe(360, 260, 360, 638, 200) # Refresh Product (Swipe Down on Screen)
+    driver.swipe(538, 210, 538, 860, 200) # Refresh Product (Swipe Down on Screen)
     time.sleep(6)
-    driver.swipe(360, 1300, 360, 580, 500) # Swipe to Product Layout
+    driver.swipe(538, 1750, 538, 750, 500) # Swipe to Product Layout
     A = A + 1
