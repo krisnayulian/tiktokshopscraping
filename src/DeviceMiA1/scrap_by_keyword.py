@@ -3,13 +3,13 @@ from appium.webdriver.common.appiumby import AppiumBy
 import pandas as pd
 import time
 from appium.webdriver.common.touch_action import TouchAction
-from utils_keyword import open_product_v1, driver, close_dialog, up_button, back_button
+from utils_keyword import open_product_v1, driver
 
 # Setup Connection and prodruct
 SESSION = 100
 SCROLL_LOOP = 2
-CATEGORY = "skincare"
-CONNECTION = "76b60a9d" # 76b60a9d / 192.168.0.106:5555
+CATEGORY = "kasur"
+CONNECTION = "3be6ee120904" # 76b60a9d / 192.168.0.106:5555
 SERVER_APPIUM_PORT = "4723"
 SERVER_APPIUM_IP = "127.0.0.1"
 
@@ -35,7 +35,7 @@ while A <= SESSION:
         print (f"Scrape the loop at {k}")
         open_product_v1(CATEGORY=CATEGORY)
         time.sleep(2)
-        driver.swipe(360, 1300, 360, 460, 500) # defautl 360, 1300, 360, 400, 400 Adjust with your device
+        driver.swipe(360, 1300, 360, 400, 500) # defautl 360, 1300, 360, 400, 400 Adjust with your device
         k = k + 1
     # try: time.sleep(2); up_button()
     # except: pass
